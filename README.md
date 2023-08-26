@@ -12,20 +12,27 @@ Please make sure that you have at least php version 8.1  and nodejs installed.
     ```sh
     composer install
     ```
-3. configre a database in the .env file
-4. run the migrations
+3. copy .env.example to .env and the configure the database credentials
+   ```sh
+   cp .env.example .env
+   ```
+4. generate application encryption key
+   ```sh
+   php artisan key:generate
+   ```
+5. run the migrations
     ```sh
     php artisan migrate
     ```
-5. install npm packages and build assets
+6. install npm packages and build assets
    ```sh
    npm install && npm run build
    ```
-6. run the app
+7. run the app
    ```sh
    php artisan serve
    ```
-7. you now can access the app from you browser at `http://localhost:8000`
+8. you now can access the app from you browser at `http://localhost:8000`
 
 
 ## Features
