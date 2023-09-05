@@ -13,8 +13,10 @@ return new class extends Migration {
         Schema::create('books', function (Blueprint $table) {
             $table->id();
             $table->integer('kotobati_id');
+            $table->index('kotobati_id');
             $table->string('kotobati_uuid')->nullable();
-            $table->text('url')->index();
+            $table->text('url');
+            $table->index('url');
             $table->string('title');
             $table->string('author');
             $table->string('pages_count');
